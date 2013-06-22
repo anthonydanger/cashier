@@ -1,6 +1,11 @@
+<% if user_signed_in? %>
+ # Show them Cashier
+<% else %>
 <div class="center hero-unit">
 		<h1>Beat Box Cashier</h1>
 		
 		<p>You found the cashier for Beat Box</p>
-		<p> <%= link_to "Sign in", "#", class: "btn btn-primary btn-large" %>
+		<p> <%= link_to "Sign UP", new_user_registration_path, class: "btn btn-primary btn-large" %>
+		<%= link_to "Sign IN", new_user_session_path, class: "btn btn-primary btn-large" %>
 </div>
+<% end %>
